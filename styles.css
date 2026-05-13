@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    color: whitesmoke;
+}
+#top-page {
+    height: 100vh;
+    position: relative;
+}
+#top-page::before {
+    content: "";
+    height: 100vh;
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(transparent 0%, rgb(40, 43, 53) 30%), url("assets/background-img.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px);
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 6rem;
+
+    background-color: hsla(0, 0%, 0%, 10%);
+    /*border: 2px solid green;*/
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-left: 2rem;
+}
+.name-container .name {
+    font-size: 3.3rem;
+    font-weight: 500;
+    font-family: "Babylonica"; 
+}
+.name-container .job {
+    font-size: .75rem;
+    font-weight: 200;
+    font-family: "Quicksand";
+    letter-spacing: 0.2rem;
+
+    text-transform: uppercase;
+    margin-left: 1rem;
+
+    transform: translateY(-.4rem);
+}
+
+.nav-links-container ul {
+    display: flex;
+    gap: 2rem;
+
+    list-style: none;   
+}
+.nav-links-container ul li a {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Inter";
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.socials-links {
+    display: flex;
+    gap: 1rem;
+
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+#presentation-section{
+    margin: auto;
+}
+.pres-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 15rem;
+}
+.pres-container .pres{
+    font-family: "Quicksand";
+    font-size: 3rem;
+}
+.pres-container .text{
+    font-family: "Inter";
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+}
+.pres-container .profile-img {
+    margin-top: 2rem;
+
+    border-radius: 50%;
+    border: 10px solid lightskyblue;
+    box-shadow: 0 0 20px lightskyblue;
+}
