@@ -10,7 +10,16 @@
     scroll-behavior: smooth;
 }
 :root {
-    --bg-clr: rgb(70, 83, 129); 
+    --bg-clr: hsl(227, 30%, 39%); 
+    --insta-gradient-clr: radial-gradient(circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%);
+    --twitter-clr: rgb(29, 161, 242);
+    --ytb-gradient-clr: linear-gradient(to right,#e52d27, #b31217);
+    --tiktok-clr: linear-gradient(45deg, #333 20%, #69C9D0 40%, #EE1D52 70%);
 }
 
 body {
@@ -83,6 +92,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    
 }
 .nav-links-container ul li .nav-link {
     width: 100%;
@@ -99,15 +110,16 @@ body {
     width: 0%;
     height: 1px;
     background-color: whitesmoke;
-    transition: 
-    width .1s ease-in-out,
-    transform .1 ease-in-out;
+    transition: width .25s ease-in-out; 
 }
 .nav-links-container ul li:hover .underline {
     width: 100%;
 }
-.nav-links-container ul li:hover > a {
-    font-size: 0.9rem;
+.nav-links-container ul li a {
+    transition: transform .1s ease-in-out;
+}
+.nav-links-container ul li:hover a {
+    transform: scale(0.9);
 }
 
 
@@ -122,7 +134,38 @@ body {
     transition: transform .1s ease-in-out;
 }
 .social-link:hover {
-    transform: scale(1.15);
+    transform: scale(1.2);
+}
+.social-link i {
+    
+}
+.social-link.instagram:hover i {
+    background: var(--insta-gradient-clr);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    
+}
+.social-link.twitter:hover i {
+    color: var(--twitter-clr);
+}
+.social-link.tiktok:hover i {
+    background: var(--tiktok-clr);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.social-link.youtube:hover i {
+    background: var(--ytb-gradient-clr);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 }
 
 #presentation-section{
@@ -167,21 +210,28 @@ body {
     font-size: 2.2rem;
     letter-spacing: .3rem;
 }
+.separator {
+    width: 90vw;
+    height: 3px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin: auto;
+    margin-bottom: 2rem;
+}
 .projects-container {
     margin: auto;
     margin-bottom: 3rem;
+    padding: 3rem 2rem;
+
     width: 80vw;
+
+    background-color: hsl(227, 30%, 35%);
+    border-radius: 10px;
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-}
-.projects-container .separator {
-    width: 100%;
-    height: 3px;
-    border-radius: 20px;
-    background-color: whitesmoke;
 }
 .project {
     width: 20rem;
@@ -212,7 +262,7 @@ body {
     height: 3rem;
     width: 20rem;
 
-    background-color: hsl(227, 30%, 35%);
+    background-color: hsl(227, 30%, 30%);
     border: 3px solid rgb(196, 196, 196);
     border-top: none;
     border-bottom: none;
